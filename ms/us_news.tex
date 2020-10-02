@@ -7,7 +7,7 @@
 \usepackage{float}
 \usepackage[scaled=.7]{beramono}
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
-\definecolor{dark-red}{rgb}{0.75,0.10,0.10} 
+\definecolor{dark-red}{rgb}{0.75,0.10,0.10}
 \usepackage[margin=1in]{geometry}
 \usepackage[linkcolor=blue,
             colorlinks=true,
@@ -19,8 +19,8 @@
 
 \usepackage{multibib}
 \usepackage{geometry} % see geometry.pdf on how to lay out the page. There's lots.
-\geometry{letterpaper}               % This is 8.5x11 paper. Options are a4paper or a5paper or other... 
-\usepackage{graphicx}                % Handles inclusion of major graphics formats and allows use of 
+\geometry{letterpaper}               % This is 8.5x11 paper. Options are a4paper or a5paper or other...
+\usepackage{graphicx}                % Handles inclusion of major graphics formats and allows use of
 \usepackage{amsfonts,amssymb,amsbsy}
 \usepackage{amsxtra}
 \usepackage{natbib}
@@ -63,7 +63,7 @@
 \begin{comment}
 
 setwd(paste0(githubdir, "notwork_news/ms"))
-tools::texi2dvi("us_news.tex", pdf = TRUE, clean = TRUE) 
+tools::texi2dvi("us_news.tex", pdf = TRUE, clean = TRUE)
 setwd(basedir)
 
 \end{comment}
@@ -77,7 +77,7 @@ Network television news is among the most frequently consumed news in the countr
 Network television news is among the most frequently consumed news in the country \citep{pew2019, pew2020}. But there is little data on what is covered on the network news or how the coverage has changed over the years. We exploit data from Vanderbilt Television News Archive (VTNA), the largest publicly available database of TV news, to shed light on two important aspects of the quality of news: geographic focus (local, national, and international) and political relevance (whether or not the news is about a politically relevant topic) \citep{curran2009media}. Coding a random sample of over 5,000 broadcast segments spanning 1968--2019, we find that the percentage of network television news devoted to topics unrelated to politics steadily increased from less than 5\% in 1968 to over 10\% in the last 15 years. The pattern of change in geographic focus is more complex, but there is a clear rise in the percentage of local news over the last two decades. The percentage of local news increased from about 5\% in 2000 to over 25\% in 2019.
 
 \section*{Data and Measurement}
-VTNA contains a continuous collection of the daily news broadcasts from \emph{ABC}, \emph{CBS} and \emph{NBC} since 1968. A few news shows from \emph{CNN} and \emph{Fox News} are available starting 1995 and 2004, respectively. In total, the archive has over 1M broadcast abstracts from US network channels between 1968 and 2019 \citep{lynch1996vanderbilt, soodlaohaprapanon2020}. For each segment of a news broadcast, the data includes information on the channel, broadcast date, duration, program title, and an abstract of the content of the segment (see Figure \ref{fig:vandy_abstract}). 
+VTNA contains a continuous collection of the daily news broadcasts from \emph{ABC}, \emph{CBS} and \emph{NBC} since 1968. A few news shows from \emph{CNN} and \emph{Fox News} are available starting 1995 and 2004, respectively. In total, the archive has over 1M broadcast abstracts from US network channels between 1968 and 2019 \citep{lynch1996vanderbilt, soodlaohaprapanon2020}. For each segment of a news broadcast, the data includes information on the channel, broadcast date, duration, program title, and an abstract of the content of the segment (see Figure \ref{fig:vandy_abstract}).
 
 \begin{figure}[H]
   \centering
@@ -99,11 +99,11 @@ From this data, we randomly sampled 100 stories from each year between 1968 and 
 
 We coded the abstracts of the news segments for geographic scope (local, national, international) and news type (soft vs. hard news). (See \ref{appendix:coding_scheme} for coding scheme and \ref{appendix:screenshots} for screenshots of the coding scheme, examples, instructions, and a sample question with the instrument.) By soft news, we mean ``information that is either personally useful or merely entertaining'' \citep{zaller2003new}.\footnote{By soft news, we mean the precise content of the news as opposed to ``soft news media''---shows that primarily carry soft news but sometimes carry hard news (e.g., \cite{baum2006oprah}).}
 
-We crowdsourced the coding of these abstracts using \textit{Figure Eight} (now \textit{Appen}). We crowdsourced the coding of these abstracts using \textit{Figure Eight} (now \textit{Appen}). Three different coders coded each broadcast abstract. The number of news abstracts coded by a coder ranges between 12 and 347. The mean is 56.6, and the standard deviation is 49. 
+We crowdsourced the coding of these abstracts using \textit{Figure Eight} (now \textit{Appen}). We crowdsourced the coding of these abstracts using \textit{Figure Eight} (now \textit{Appen}). Three different coders coded each broadcast abstract. The number of news abstracts coded by a coder ranges between 12 and 347. The mean is 56.6, and the standard deviation is 49.
 
-To guarantee high-quality coding, we coded 230 randomly chosen questions ourselves and included those as gold standard questions in the survey.\footnote{The list of gold standard questions and their answers is available \href{https://github.com/notnews/notwork_news/blob/master/data/sample_questions_gold.csv}{here (CSV)}.} The fewest gold standard questions that a coder had to field was 9. Any answer from a coder who answered less than 80\% on the gold standard questions was replaced by an answer from a coder who got 80\% or more of the gold standard questions correct. The average score on gold standard questions for the type of news and geographic focus was 88.1\% and 88.6\%, respectively. 
+To guarantee high-quality coding, we coded 230 randomly chosen questions ourselves and included those as gold standard questions in the survey.\footnote{The list of gold standard questions and their answers is available \href{https://github.com/notnews/notwork_news/blob/master/data/sample_questions_gold.csv}{here (CSV)}.} The fewest gold standard questions that a coder had to field was 9. Any answer from a coder who answered less than 80\% on the gold standard questions was replaced by an answer from a coder who got 80\% or more of the gold standard questions correct. The average score on gold standard questions for the type of news and geographic focus was 88.1\% and 88.6\%, respectively.
 
-The inter-coder agreement among coders who met the standard for geographic scope was 50.1\%, and news classification was 80.3\%. Krippendorf's $\alpha$ for the tasks for 0.4 and 0.3, respectively. 
+The inter-coder agreement among coders who met the standard for geographic scope was 50.1\%, and news classification was 80.3\%. Krippendorf's $\alpha$ for the tasks for 0.4 and 0.3, respectively.
 
 For our main results, we subset our analysis to stories where two or more of the high accuracy coders agreed on the label. For the type of news, this means sacrificing ten rows, and for the geographic focus, it means sacrificing 195 rows or less than 5\% of the data. And we assign the story the label given by the majority.
 
@@ -119,9 +119,9 @@ Network news is steadily becoming softer (see Figure \ref{fig:soft_over_time}). 
 
 \input{../tabs/news_over_time.tex}
 
-Moving to the geographic focus of news, the pattern in local news is the clearest. Since the 2000s, the provision of local news has increased substantially. It has moved from roughly 5\% to 20\% (see Figure \ref{fig:sub1_over_time}). Between 1985 and 2000, there was another concave curve peaking in the early 1990s at about 20\%. Between 1970 and 1985, the provision remains flat. 
+Moving to the geographic focus of news, the pattern in local news is the clearest. Since the 2000s, the provision of local news has increased substantially. It has moved from roughly 5\% to 20\% (see Figure \ref{fig:sub1_over_time}). Between 1985 and 2000, there was another concave curve peaking in the early 1990s at about 20\%. Between 1970 and 1985, the provision remains flat.
 
-Percentages of national and international news seem to follow a pattern with national news generally peaking around presidential elections (see Figure \citep{fig:national_president}) and international news peaks during wars (see Figure \ref{fig:international_war}).
+Percentages of national and international news seem to follow a pattern with national news generally peaking around presidential elections (see Figure \ref{fig:national_president}) and international news peaks during wars (see Figure \ref{fig:international_war}).
 
 \begin{figure}[H]
   \centering
@@ -144,19 +144,19 @@ Percentages of national and international news seem to follow a pattern with nat
   \includegraphics[width=.95\linewidth]{../figs/fig_geography_presidential.pdf}
 \end{figure}
 
-Our numbers are sharply different from those obtained by \cite{curran2009media}. In the media analysis by Curran et al., in 2007, about 27\% of the television news was soft. Our numbers are closer to 10\%. For geographic focus, our numbers are closer to 30\% while the Curran et al. estimate is 20\%. 
+Our numbers are sharply different from those obtained by \cite{curran2009media}. In the media analysis by Curran et al., in 2007, about 27\% of the television news was soft. Our numbers are closer to 10\%. For geographic focus, our numbers are closer to 30\% while the Curran et al. estimate is 20\%.
 
 \section*{Discussion}
-Network television news was widely regarded for its quality in the 1960s and 1970s \citep{hallin1990whatever}. Was the esteem it was held in deserved? And how has the quality fared since? These questions have added urgency given network television news continues to be among the most common sources of news for Americans. Capitalizing on a vast dataset of news transcripts, we have an answer. The quality of news has declined somewhat, with soft news constituting twice as large a share today than 70 years ago. 
+Network television news was widely regarded for its quality in the 1960s and 1970s \citep{hallin1990whatever}. Was the esteem it was held in deserved? And how has the quality fared since? These questions have added urgency given network television news continues to be among the most common sources of news for Americans. Capitalizing on a vast dataset of news transcripts, we have an answer. The quality of news has declined somewhat, with soft news constituting twice as large a share today than 70 years ago.
 
 \clearpage
 \bibliographystyle{apsr}
-\bibliography{us_news}  
+\bibliography{us_news}
 
 \clearpage
 \appendix
 \renewcommand{\thesection}{SI \arabic{section}}
-\renewcommand\thetable{\thesection.\arabic{table}}  
+\renewcommand\thetable{\thesection.\arabic{table}}
 \renewcommand\thefigure{\thesection.\arabic{figure}}
 \counterwithin{figure}{section}
 
@@ -175,21 +175,21 @@ You will see snippets of stories from American television news. We would like to
             \begin{itemize}
                 \item Sports
                 \item Weather (but not climate, e.g., global warming is excluded)
-                \item Entertainment celebrities 
+                \item Entertainment celebrities
                 \item Travel
                 \item Style/Fashion
                 \item Cooking
                 \item Arts or Literature
                 \item Personal Tech.: New Apple products, etc.
-                \item Personal health: How to sleep better, etc. 
+                \item Personal health: How to sleep better, etc.
             \end{itemize}
-    
+
             \item Hard News: News that is politically consequential. News that tells us the state of the world, e.g., unemployment, crime, poll results, etc. or news that talks about policies being debated, e.g., healthcare bill, abortion bill, Medicare, Medicaid, etc. Among others, it includes the following areas:
             \begin{itemize}
                 \item Politicians, Parties, Elections, and Polling: Poll results, candidate profiles, election results, etc.
                 \item Economy: Taxes, Inflation, Unemployment, Trade, GDP, etc.
                 \item Education: Educational policies, schools, universities, students, educational budgets, etc.
-                \item Environment: Environmental policies and protection, global warming, plastics, pollution, etc. 
+                \item Environment: Environmental policies and protection, global warming, plastics, pollution, etc.
                 \item Justice System, Law and Order, Crime: Crime rates, incarceration, news of specific crime, etc.
                 \item Terrorism, War, Conflict, Military
                 \item Immigration/Asylum
