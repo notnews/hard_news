@@ -28,8 +28,8 @@ library("wesanderson")
 source("scripts/02_recode.R")
 
 ## Key dates
-president_labels <- c("Nixon", "Ford", "Carter", "Reagan", "Bush", "Clinton", "Bush", "Obama", "Trump")  
-president_years  <- c(1971.5, 1975.5, 1979, 1985, 1991, 1997, 2005, 2013, 2019)
+president_labels      <- c("Nixon", "Ford", "Carter", "Reagan", "Bush", "Clinton", "Bush", "Obama", "Trump")  
+president_years       <- c(1971.5, 1975.5, 1979, 1985, 1991, 1997, 2005, 2013, 2019)
 presidential_election <- seq(1968, 2016, 4)
 midterm_election      <- seq(1970, 2018, 4)
 wars_years            <- c(1971, 1975, 1978, 1989, 1991, 2001, 2003, 2005, 2014)         
@@ -72,8 +72,6 @@ df_f8_geo %>%
   unique() %>% 
   tail(n=20)
 
-
-
 ## Proportion of news by geography - majority coding
 df_f8_geo %>% 
   group_by(geography_majority) %>% 
@@ -85,7 +83,6 @@ df_f8_geo %>%
   geom_line(aes(color = geography_majority), size = 1) +
   scale_x_continuous(breaks= pretty_breaks(n=15)) +
   scale_y_continuous(breaks= pretty_breaks(n=10)) +
-  #geom_smooth(method = "lm", fill = NA, color = "darkgrey", size = 0.5) +
   theme_minimal(base_size = 20) + 
   scale_color_manual(values = wes_palette("IsleofDogs1")) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1),legend.position = "none") +
@@ -101,7 +98,6 @@ df_f8_geo_unanimous %>%
   geom_line(aes(color = geography), size = 1) +
   scale_x_continuous(breaks= pretty_breaks(n=15)) +
   scale_y_continuous(breaks= pretty_breaks(n=10)) +
-  #geom_smooth(method = "lm", fill = NA, color = "darkgrey", size = 0.5) +
   theme_minimal(base_size = 20) + 
   scale_color_manual(values = wes_palette("IsleofDogs1")) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
@@ -125,7 +121,6 @@ df_f8_geo %>%
         legend.position = "none") +
   labs(y= "Proportion of International News", x = "Year")
 ggsave(filename = file.path("figs","fig_geography_wars.pdf"), width = 13.92, height = 9.58)                        
-
 
 ## Proportion of national news with elections added 
 df_f8_geo %>% 

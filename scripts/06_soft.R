@@ -27,7 +27,7 @@ library("texreg")
 library("ggrepel")
 
 ## Load the data
-source("scripts/02_recode.R")
+source("scripts/03_recode.R")
 
 ############################################################################################
 ## Majority Coding 
@@ -66,10 +66,8 @@ df_f8_soft %>%
   ggplot(aes(x = year, y = prob_news, group = news_majority, color = news_majority)) + 
   geom_line(aes(color = news_majority), size = 1) +
   scale_color_manual(values = wes_palette("IsleofDogs1")) +
-#  scale_color_manual(values = c("#00AFBB", "#E7B800")) +
   scale_x_continuous(breaks= pretty_breaks(n = 10)) +
   scale_y_continuous(breaks= pretty_breaks(n = 10)) +
-  #geom_smooth(method = "lm", fill = NA, color = "darkgrey", size = 0.5) +
   theme_minimal(base_size = 20) + 
   theme(axis.text.x = element_text(angle = 45, hjust = 1), legend.position = "none") +
   labs(y= "Proportion of News", x = "Year", color = "News Type") + 
@@ -141,10 +139,8 @@ df_f8_soft %>%
   ggplot(aes(x = year, y = prob_news, group = news, color=news)) + 
   geom_line(aes(color = news), size = 1) +
   scale_color_manual(values = wes_palette("IsleofDogs1")) +
-  #  scale_color_manual(values = c("#00AFBB", "#E7B800")) +
   scale_x_continuous(breaks= pretty_breaks(n = 10)) +
   scale_y_continuous(breaks= pretty_breaks(n = 10)) +
-  #geom_smooth(method = "lm", fill = NA, color = "darkgrey", size = 0.5) +
   theme_minimal(base_size = 20) + 
   theme(axis.text.x = element_text(angle = 45, hjust = 1), legend.position = "none") +
   labs(y= "Proportion of News", x = "Year", color = "News Type") + 
