@@ -17,23 +17,26 @@ Network television news is among the most frequently consumed news in the countr
 
 ### Scripts
 
-* [Create Sample](scripts/01_clean_sample.R)
+* [Clean scraped data](scripts/01_clean_vandy.R)
+
+* [Create Sample](scripts/02_sample_f8.R)
     - Stratified random sample by year
     - Weighted random sample by duration of the news segment
 
-* [Recode Data](scripts/02_recode.R)
+* [Recode Data](scripts/03_recode.R)
 
-* [Coverage of soft news, by channel, by year, by weekday/weekend](scripts/03_soft.R)
+* [Assess Reliability and Quality of Data](scripts/04_quality_checks.R)
 
-* [Coverage of local, national, and foreign, by channel, by year, month, ](scripts/04_geo.R)
+* [Summary statistics on full data set](scripts/05_data_description.R)
 
-* [Coverage of topics in agg., by channel, year, etc.](scripts/05_topics.R)
+* [Coverage of soft news, by channel, by year, by weekday/weekend](scripts/06_soft.R)
 
-* [Summary statistics on full data set](scripts/06_data_description.R)
+* [Coverage of local, national, and foreign, by channel, by year, month, ](scripts/07_geo.R)
 
-* [Regression models](scripts/07_regression.R)
+* [Coverage of topics in agg., by channel, year, etc.](scripts/08_topics.R)
 
-* [Assess Reliability and Quality of Data](scripts/08_quality_checks.R)
+* [Regression models](scripts/09_regression.R)
+
 
 ### Figures and Tables
 
